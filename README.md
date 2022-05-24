@@ -3,10 +3,10 @@
 
 ## About
 
-REST API for a project management app. Built in Express + MongoDB.
+REST API for a project management app.
 
-- This repo implements the the server (REST API).
-- A repository for with the client (React App) can be found here: https://github.com/Ironborn-Ironhack-March-2022/ironborn-project-management-client 
+- This repo implements the backend REST API (built in Express + MongoDB).
+- A repository for with the frontend (React App) can be found here: https://github.com/Ironborn-Ironhack-March-2022/ironborn-project-management-client 
 
 
 
@@ -36,7 +36,7 @@ To run in your computer, follow these steps:
 
 <br/>
 
-**Other endpoints**
+**Projects**
 
 | HTTP verb   | Path | Request Headers | Request body  | Description |
 | ------------- | ------------- | ------------- |------------- | ------------- |
@@ -45,6 +45,17 @@ To run in your computer, follow these steps:
 | GET  | /api/projects/:projectId  | –  | – | Get project details  |
 | PUT  | /api/projects/:projectId  | Authorization: Bearer `<jwt>`  | { title: String, description: String, tasks: Array }  | Update a project  |
 | DELETE  | /api/projects/:projectId  | Authorization: Bearer `<jwt>`  | – | Delete a project  |
+
+
+<br/>
+
+**Tasks**
+
+| HTTP verb   | Path | Request Headers | Request body  | Description |
+| ------------- | ------------- | ------------- |------------- | ------------- |
+| POST  | /api/tasks  | Authorization: Bearer `<jwt>`  | { title: String, description: String, projectId: ObjectId }  | Create new task  |
+| GET  | /api/tasks  | –  | –  | Get all tasks. Not implemented (yet)  |
+| GET  | /api/tasks/:taskId  | –  | – | Get task details. Not implemented (yet)  |
 
 
 ## Demo
